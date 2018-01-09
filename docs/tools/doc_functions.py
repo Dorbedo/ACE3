@@ -42,7 +42,7 @@ def main():
     logging.debug(args)
 
     addonsdir = os.path.abspath(os.path.normpath(__file__ + '/../../../addons'))
-    docfolder = os.path.abspath(os.path.normpath(__file__ + '/../../docs/wiki/functions'))
+    docfolder = os.path.abspath(os.path.normpath(__file__ + '/../../wiki/functions'))
 
     logging.debug("AddOn path: %s", addonsdir)
     logging.debug("Document path: %s", docfolder)
@@ -358,8 +358,8 @@ def document_function_ace(function):
                 str_list.append("{} | {} | {} | {}\n".format(*argument))
             str_list.append("\n")
         else:
-            str_list.append("__Return Value__\n\nDescription | Datatype(s) | Default value\n--- | --- | ---\n{} | {} | {} \n\n".format(\
-                function.return_value[0][1], function.return_value[0][2], function.return_value[0][3]))
+            str_list.append("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {} \n\n".format(\
+                function.return_value[0][1], function.return_value[0][2]))
     else:
         str_list.append("__Return Value__\n\nNone\n\n")
 
