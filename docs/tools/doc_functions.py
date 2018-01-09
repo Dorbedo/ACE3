@@ -30,11 +30,12 @@ import logging
 def main():
     """Main"""
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog='Document SQF functions')
     parser.add_argument('directory', nargs="?", type=str, help='only crawl specified component addon folder')
     parser.add_argument('--output', default='ace', choices=['tfar', 'ace'], help='The style of the output')
     parser.add_argument('--loglevel', default=30, type=int, help='The Loglevel (default: 30)')
     parser.add_argument('--logfile', type=str, help='Write log to file')
+    parser.add_argument('--version', action='version', version='%(prog)s 1.0')
     args = parser.parse_args()
 
     logging.basicConfig(format='%(levelname)s:%(message)s', level=args.loglevel, filename=args.logfile)
