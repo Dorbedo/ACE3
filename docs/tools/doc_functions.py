@@ -32,7 +32,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('directory', nargs="?", type=str, help='only crawl specified component addon folder')
-    parser.add_argument('--output', default='tfar', choices=['tfar', 'ace'], help='The style of the output')
+    parser.add_argument('--output', default='ace', choices=['tfar', 'ace'], help='The style of the output')
     parser.add_argument('--loglevel', default=30, type=int, help='The Loglevel (default: 30)')
     parser.add_argument('--logfile', type=str, help='Write log to file')
     args = parser.parse_args()
